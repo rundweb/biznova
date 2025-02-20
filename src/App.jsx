@@ -1,14 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 const App = () => {
   return (
     <div className="overflow-hidden">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );

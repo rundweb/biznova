@@ -11,7 +11,7 @@ const NavbarComponents = ({ name, path }) => {
         {name}
         <FaAngleRight />
       </Link>
-      <div className="overflow-hidden group h-8 hidden md:inline-block">
+      <div className="overflow-hidden group h-8 hidden md:flex ">
         <div className="flex flex-col">
           <Link
             to={path}

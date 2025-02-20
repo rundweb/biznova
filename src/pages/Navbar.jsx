@@ -38,14 +38,22 @@ const Navbar = () => {
       {
         x: 0,
         opacity: 1,
-        stagger:0.1,
+        stagger: 0.1,
         duration: 1.2,
         ease: "back.out",
       }
     );
   }, []);
+
+  const itemNav = document.querySelectorAll(".item-nav");
+
+  itemNav.forEach((item) => {
+    item.addEventListener("click", () => {
+      setOpenMenu(true);
+    });
+  });
   return (
-    <section className="bg-white font-ns">
+    <section className="bg-white font-ns fixed w-full">
       <div className="container-primary flex items-center justify-between">
         <div className="w-full relative z-20 nav-link logo">
           <h1 className="text-3xl font-extrabold tracking-wide text-neutral-800">
@@ -68,12 +76,12 @@ const Navbar = () => {
         </div>
         {/* menu mobile */}
         <div
-          className={`w-full min-h-screen p-5 fixed top-0 right-0 bg-white flex flex-col z-10 py-16 ${
+          className={`w-full min-h-screen p-5 fixed top-0 bg-white flex flex-col z-10 py-16 ${
             openMenu ? "-right-full" : "right-0"
           } duration-500 ease-linear md:hidden`}
         >
           {menu.map((item, i) => (
-            <div key={i} className="nav-link">
+            <div key={i} className="nav-link item-nav">
               <NavbarComponents name={item.name} path={item.path} />
             </div>
           ))}
@@ -88,7 +96,7 @@ const Navbar = () => {
         <div className="hidden md:flex w-full items-center gap-4 justify-center">
           {menu.map((item, i) => (
             <div key={i} className="logo">
-              <NavbarComponents name={item.name} path={item.name} />
+              <NavbarComponents name={item.name} path={item.path} />
             </div>
           ))}
         </div>
