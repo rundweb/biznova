@@ -25,4 +25,23 @@ const menu = [
   },
 ];
 
-export {menu}
+
+const dataHome = [
+  {
+    name:"Courses",
+    count:200,
+    last:"+"
+  },
+  {
+    name:"Experience",
+    count:10,
+    last:"+"
+  },
+  {
+    name:"Followers",
+    count:2,
+    last:"m"
+  },
+]
+
+export {menu,dataHome}

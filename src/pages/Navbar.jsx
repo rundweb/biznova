@@ -53,30 +53,30 @@ const Navbar = () => {
     });
   });
   return (
-    <section className="bg-white font-ns fixed w-full">
+    <section className="bg-transparent font-ns fixed w-full z-50">
       <div className="container-primary flex items-center justify-between">
-        <div className="w-full relative z-20 nav-link logo">
-          <h1 className="text-3xl font-extrabold tracking-wide text-neutral-800">
+        <div className="w-full relative z-50 nav-link logo">
+          <h1 className="text-3xl font-extrabold tracking-wide font-primary">
             BIZ<span>NOVA</span>
           </h1>
         </div>
         {/* icon open menu */}
-        <div className="relative z-20 icons logo md:hidden">
+        <div className="relative z-50 icons logo md:hidden">
           {openMenu ? (
             <HiOutlineMenuAlt3
-              className="text-3xl text-neutral-800"
+              className="text-3xl font-primary"
               onClick={handleClick}
             />
           ) : (
             <IoClose
-              className="text-3xl text-neutral-800"
+              className="text-3xl font-primary"
               onClick={() => setOpenMenu(!openMenu)}
             />
           )}
         </div>
         {/* menu mobile */}
         <div
-          className={`w-full min-h-screen p-5 fixed top-0 bg-white flex flex-col z-10 py-16 ${
+          className={`w-full min-h-screen p-5 fixed top-0 bg-third flex flex-col z-40 py-16 ${
             openMenu ? "-right-full" : "right-0"
           } duration-500 ease-linear md:hidden`}
         >
@@ -87,7 +87,7 @@ const Navbar = () => {
           ))}
           <Link
             to={"/contact"}
-            className="nav-link bg-blue-500 flex items-center justify-center h-12 rounded-lg text-white tracking-wide font-semibold text-lg mt-6 shadow-xl"
+            className="nav-link bg-primary flex items-center justify-center h-12 rounded-lg text-third tracking-wide font-semibold text-lg mt-6 shadow-xl"
           >
             Contact Us
           </Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
         <div className="hidden md:flex w-full items-center justify-end logo">
           <Link
             to={"/contact"}
-            className="bg-blue-500 h-10 rounded-lg flex items-center group justify-center px-5 text-white font-medium gap-2 hover:bg-blue-600 duration-300 ease-in-out shadow-lg"
+            className="button-blue group"
           >
             Contact Us
             <div className="h-5 w-5 overflow-hidden">
