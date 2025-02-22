@@ -63,4 +63,33 @@ const whatWeOffer = [
   },
 ];
 
-export { menu, dataHome, whatWeOffer };
+import service1 from "../image/website.jpg";
+import service2 from "../image/seo.jpg";
+import service3 from "../image/branding.jpg";
+import service4 from "../image/eccomerce.jpg";
+
+const services = [
+  {
+    title: "Custom Website",
+    description: "Build a powerful, brand-driven website with modern design.",
+    icon: service1,
+  },
+  {
+    title: "SEO Optimization",
+    description: "Elevate your search rankings with advanced SEO strategies.",
+    icon: service2,
+  },
+  {
+    title: "Branding & Design",
+    description: "Create a distinctive and impactful brand identity.",
+    icon: service3,
+  },
+  {
+    title: "E-commerce Solutions",
+    description:
+      "Unlock seamless online selling with secure payment integration.",
+    icon: service4,
+  },
+];
+
+export { menu, dataHome, whatWeOffer, services };

@@ -35,7 +35,7 @@ const AboutComponents = () => {
     gsap.fromTo(
       ".split-h1",
       {
-        opacity: 0.1,
+        opacity: 0,
       },
       {
         opacity: 1,
@@ -52,7 +52,7 @@ const AboutComponents = () => {
     gsap.fromTo(
       ".split-p",
       {
-        opacity: 0.1,
+        opacity: 0,
       },
       {
         opacity: 1,
@@ -91,13 +91,13 @@ const AboutComponents = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".about-box",
-          start: "top 40%",
+          start: "top 20%",
         },
       }
     );
   }, []);
   return (
-    <section className="about-box container-primary font-ns min-h-screen flex gap-10 lg:gap-28 justify-center items-center w-full py-16 flex-col-reverse md:flex-row">
+    <section className="about-box container-primary font-ns min-h-screen flex gap-10 lg:gap-28 justify-center items-center w-full py-16 flex-col-reverse md:flex-row ">
       <div className="relative p-5 w-full">
         <img
           src={aboutImg}
