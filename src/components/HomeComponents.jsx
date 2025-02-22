@@ -1,19 +1,21 @@
 import { BsStars } from "react-icons/bs";
 import home from "../assets/image/home.jpg";
 import { useEffect } from "react";
-import gsap from "gsap-trial";
+import gsap from "gsap";
 import ButtonBlue from "../element/ButtonBlue";
 import ButtonWhite from "../element/ButtonWhite";
 import { dataHome } from "../assets/data/data";
 import CountUp from "react-countup";
-import SplitText from "gsap-trial/SplitText";
-gsap.registerPlugin(SplitText);
 
 const HomeComponents = () => {
+  const textH1 = "Elevate Your Business With A Next-Gen Website";
+  const textP =
+    "A modern, high-performance, and fully responsive template. SEO-friendly, fast, and easy to customize.";
+  const words = textH1.split(" ");
+  const wordsP = textP.split(" ");
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-    const mySplitText = new SplitText(".split", { type: "words" });
-    const words = mySplitText.words;
+
     tl.fromTo(
       ".home",
       { opacity: 0, y: 100 },
@@ -23,15 +25,10 @@ const HomeComponents = () => {
         duration: 1,
       }
     )
-      .from(
-        words,
-        {
-          y: 10,
-          opacity: 0,
-          stagger: 0.1,
-          duration: 0.8,
-          ease: "power2.out",
-        },
+      .fromTo(
+        ".text-h1",
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.1, duration: 1, ease: "power2.in" },
         "-=0.5"
       )
       .fromTo(
@@ -48,10 +45,11 @@ const HomeComponents = () => {
       .fromTo(
         ".home-img",
         { height: "100%" },
-      {
-        height: 0,
-        duration: 2,
-        ease: "power2.out" },
+        {
+          height: 0,
+          duration: 2,
+          ease: "power2.out",
+        },
         "-=0.2"
       )
       .fromTo(
@@ -67,7 +65,7 @@ const HomeComponents = () => {
       );
   }, []);
   return (
-    <div className="container-primary font-ns min-h-screen flex flex-col gap-10 lg:gap-20 justify-center items-center w-full py-20 md:flex-row mt-10 md:mt-0">
+    <div className="container-primary font-ns min-h-screen flex flex-col gap-10 lg:gap-20 justify-center items-center w-full py-16 md:flex-row mt-10 md:mt-0">
       <div className="flex flex-col justify-center items-center text-center gap-5 w-full max-w-sm md:max-w-full md:items-start md:text-start">
         <div className="home">
           <p className="button-blue rounded-full text-sm font-semibold">
@@ -75,21 +73,24 @@ const HomeComponents = () => {
             Innovate With Confidence
           </p>
         </div>
-        <div className="overflow-hidden">
-          <h1
-            className="split text-font-primary font-extrabold lg:font-black tracking-wide
+        <div className="overflow-hidden flex items-center flex-wrap justify-center md:justify-start">
+          {words.map((item, index) => (
+            <h1
+              key={index}
+              className={`text-h1 animated-text text-font-primary font-extrabold lg:font-black tracking-wide
             text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight 
-            "
-          >
-            Elevate Your <br /> <span>Business</span> With A <br /> Next-Gen{" "}
-            <span>Website</span>
-          </h1>
+            ${index===2&&("text-secondary")} ${index===6&&("text-secondary")}`}
+            >
+              {item}&nbsp;
+            </h1>
+          ))}
         </div>
-        <div className="overflow-hidden">
-          <h2 className="split text-font-primary lg:max-w-md font-medium">
-            A modern, high-performance, and fully responsive template.
-            SEO-friendly, fast, and easy to customize.
-          </h2>
+        <div className="overflow-hidden flex items-center flex-wrap lg:max-w-md justify-center md:justify-start">
+          {wordsP.map((item, i) => (
+            <h2 key={i} className="text-h1 text-font-primary  font-medium">
+              {item}&nbsp;
+            </h2>
+          ))}
         </div>
         <div className="flex flex-wrap gap-2 items-center justify-center mt-5">
           <div className="home-btn">

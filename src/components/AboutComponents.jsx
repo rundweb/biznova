@@ -4,19 +4,19 @@ import ButtonBlue from "../element/ButtonBlue";
 import { whatWeOffer } from "../assets/data/data";
 import { BiCheckDouble } from "react-icons/bi";
 
-import gsap from "gsap-trial";
-import ScrollTrigger from "gsap-trial/ScrollTrigger";
-import SplitText from "gsap-trial/SplitText";
+import gsap from "gsap";
 import { useEffect } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 const AboutComponents = () => {
-  useEffect(() => {
-    const splitAbout = new SplitText(".about-split", { type: "words" });
-    const words = splitAbout.words;
-    const splitAbout2 = new SplitText(".about-split2", { type: "words" });
-    const words2 = splitAbout2.words;
+  const aboutH1 = "Innovative Digital Solutions for Modern Businesses";
+  const aboutP =
+    "At BizNova, we are committed to helping businesses establish a strong digital presence through high-quality, professionally designed website templates. Our solutions are tailored to meet the evolving needs of modern enterprises.";
 
+  const splitH1 = aboutH1.split(" ");
+  const splitP = aboutP.split(" ");
+  useEffect(() => {
     gsap.fromTo(
       ".about-title",
       { y: 100, opacity: 0 },
@@ -32,27 +32,39 @@ const AboutComponents = () => {
       }
     );
 
-    gsap.from(words, {
-      opacity: 0.4,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".about-box",
-        start: "top 40%",
+    gsap.fromTo(
+      ".split-h1",
+      {
+        opacity: 0.1,
       },
-    });
+      {
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.in",
+        scrollTrigger: {
+          trigger: ".about-box",
+          start: "top 40%",
+        },
+      }
+    );
 
-    gsap.from(words2, {
-      opacity: 0.4,
-      stagger: 0.1,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".about-box",
-        start: "top 25%",
+    gsap.fromTo(
+      ".split-p",
+      {
+        opacity: 0.1,
       },
-    });
+      {
+        opacity: 1,
+        stagger: 0.05,
+        duration: 1,
+        ease: "power2.in",
+        scrollTrigger: {
+          trigger: ".about-box",
+          start: "top 20%",
+        },
+      }
+    );
 
     gsap.fromTo(
       ".list-about",
@@ -104,20 +116,25 @@ const AboutComponents = () => {
             About Us
           </p>
         </div>
-        <div className="flex flex-wrap justify-start md:justify-start lg:max-w-xl about-img">
-          <h1
-            className={`about-split text-font-primary font-extrabold lg:font-black tracking-wide text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight `}
-          >
-            Innovative Digital Solutions for Modern Businesses
-          </h1>
+        <div className="flex flex-wrap justify-start md:justify-start lg:max-w-xl">
+          {splitH1.map((item, i) => (
+            <h1
+              key={i}
+              className={`split-h1 text-font-primary font-extrabold lg:font-black tracking-wide text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight ${i===2&&("text-secondary")} ${i===5&&("text-secondary")}`}
+            >
+              {item}&nbsp;
+            </h1>
+          ))}
         </div>
-        <div className="home-p">
-          <h2 className="text-font-primary font-medium about-split2">
-            At BizNova, we are committed to helping businesses establish a
-            strong digital presence through high-quality, professionally
-            designed website templates. Our solutions are tailored to meet the
-            evolving needs of modern enterprises.
-          </h2>
+        <div className="flex flex-wrap justify-start">
+          {splitP.map((item, i) => (
+            <h2
+              key={i}
+              className="split-p text-font-primary font-medium about-split2"
+            >
+              {item}&nbsp;
+            </h2>
+          ))}
         </div>
 
         <div className="flex flex-wrap gap-2">
