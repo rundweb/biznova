@@ -52,8 +52,22 @@ const Navbar = () => {
       setOpenMenu(true);
     });
   });
+
+  const [shadowNav, setShadowNav] = useState(true);
+
+  useEffect(() => {
+    const handleShadow = () => {
+      window.scrollY > 10 ? setShadowNav(false) : setShadowNav(true);
+    };
+
+    window.addEventListener("scroll", handleShadow);
+  }, []);
   return (
-    <section className="bg-transparent font-ns fixed w-full z-50">
+    <section
+      className={`bg-white font-ns fixed w-full z-50 ${
+        shadowNav ? "shadow-none" : "shadow-md"
+      } duration-300 ease-in-out`}
+    >
       <div className="container-primary flex items-center justify-between">
         <div className="w-full relative z-50 nav-link logo">
           <h1 className="text-3xl font-extrabold tracking-wide font-primary">
@@ -102,10 +116,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex w-full items-center justify-end logo">
-          <Link
-            to={"/contact"}
-            className="button-blue group"
-          >
+          <Link to={"/contact"} className="button-blue group">
             Contact Us
             <div className="h-5 w-5 overflow-hidden">
               <div className="relative flex items-center justify-center flex-col gap-2">

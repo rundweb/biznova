@@ -1,27 +1,19 @@
 import { BsStars } from "react-icons/bs";
 import home from "../assets/image/home.jpg";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect } from "react";
+import gsap from "gsap-trial";
 import ButtonBlue from "../element/ButtonBlue";
 import ButtonWhite from "../element/ButtonWhite";
 import { dataHome } from "../assets/data/data";
 import CountUp from "react-countup";
+import SplitText from "gsap-trial/SplitText";
+gsap.registerPlugin(SplitText);
+
 const HomeComponents = () => {
-  const textHome = [
-    "Elevate",
-    "Your",
-    "Business",
-    "with",
-    "a",
-    "Next-Gen",
-    "Website",
-  ];
-
-  const textRef = useRef([]);
-
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-
+    const mySplitText = new SplitText(".split", { type: "words" });
+    const words = mySplitText.words;
     tl.fromTo(
       ".home",
       { opacity: 0, y: 100 },
@@ -31,42 +23,35 @@ const HomeComponents = () => {
         duration: 1,
       }
     )
-      .fromTo(
-        textRef.current,
-        { opacity: 0, y: 100 },
+      .from(
+        words,
         {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          stagger: 0.2,
+          y: 10,
+          opacity: 0,
+          stagger: 0.1,
+          duration: 0.8,
+          ease: "power2.out",
         },
-        "-=0.8"
-      )
-      .fromTo(
-        ".home-p",
-        { opacity: 0, y: 100 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-        },
-        "-=0.8"
+        "-=0.5"
       )
       .fromTo(
         ".home-btn",
-        { opacity: 0, y: 100 },
+        { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
           duration: 1,
           stagger: 0.2,
         },
-        "-=0.8"
+        "-=1"
       )
       .fromTo(
         ".home-img",
-        { height: 0 },
-        { height: "480px", duration: 2 },
+        { height: "100%" },
+      {
+        height: 0,
+        duration: 2,
+        ease: "power2.out" },
         "-=0.2"
       )
       .fromTo(
@@ -90,29 +75,29 @@ const HomeComponents = () => {
             Innovate With Confidence
           </p>
         </div>
-        <div className="flex flex-wrap justify-center md:justify-start lg:max-w-lg ">
-          {textHome.map((word, index) => (
-            <h1
-              key={index}
-              ref={(el) => (textRef.current[index] = el)}
-              className={`text-font-primary font-extrabold lg:font-black tracking-wide text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight capitalize ${
-                index === 2 && "text-primary"
-              } ${index === 6 && "text-primary"}`}
-            >
-              {word}
-              <span>&nbsp;</span>
-            </h1>
-          ))}
+        <div className="overflow-hidden">
+          <h1
+            className="split text-font-primary font-extrabold lg:font-black tracking-wide
+            text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight 
+            "
+          >
+            Elevate Your <br /> <span>Business</span> With A <br /> Next-Gen{" "}
+            <span>Website</span>
+          </h1>
         </div>
-        <div className="home-p">
-          <h2 className="text-font-primary lg:max-w-md">
+        <div className="overflow-hidden">
+          <h2 className="split text-font-primary lg:max-w-md font-medium">
             A modern, high-performance, and fully responsive template.
             SEO-friendly, fast, and easy to customize.
           </h2>
         </div>
         <div className="flex flex-wrap gap-2 items-center justify-center mt-5">
-          <ButtonBlue name={"Get Started"} />
-          <ButtonWhite name={"View Features"} />
+          <div className="home-btn">
+            <ButtonBlue name={"Get Started"} />
+          </div>
+          <div className="home-btn">
+            <ButtonWhite name={"View Features"} />
+          </div>
         </div>
       </div>
       <div className="w-full overflow-hidden">
@@ -120,9 +105,10 @@ const HomeComponents = () => {
           <img
             src={home}
             alt="home-image primary"
-            className="h-80 max-h-96 md:max-h-[480px] w-full object-cover object-center rounded-2xl home-img"
+            className="h-80 sm:h-[450px] w-full object-cover rounded-xl"
           />
-          <div className="home-count absolute w-[95%] bg-third/50 filter backdrop-blur-md left-2/4 -translate-x-2/4 bottom-2 rounded-2xl items-center justify-center p-5 border-2 border-third hidden md:flex">
+          <div className="absolute z-30 h-full w-full bg-white bottom-0 right-0 home-img"></div>
+          <div className="home-count absolute w-[95%] bg-third/50 filter backdrop-blur-sm left-2/4 -translate-x-2/4 bottom-2 rounded-2xl items-center justify-center p-5 border-2 border-third hidden md:flex">
             <div className="flex items-center justify-around gap-5 w-full">
               {dataHome.map((item, i) => (
                 <div

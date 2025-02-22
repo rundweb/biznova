@@ -16,6 +16,6 @@
     @apply bg-gradient-to-t from-secondary to-primary h-10 rounded-lg flex items-center justify-center px-5 text-third gap-2 hover:from-primary hover:to-secondary duration-300 ease-in-out shadow-lg font-normal;
   }
   .button-white {
-    @apply bg-third h-10 rounded-lg flex items-center justify-center px-5 text-primary font-medium gap-2 border-2 border-primary shadow-lg;
+    @apply bg-third h-10 rounded-lg flex items-center justify-center px-5 text-secondary font-medium gap-2 border-2 border-primary shadow-lg;
   }
 }

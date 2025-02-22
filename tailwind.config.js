@@ -20,9 +20,6 @@ export default {
         // white
         "third" : "#FFFFFF"
       },
-      backgroundImage:{
-        "home":"url('/src/assets/image/bg-home.jpg')"
-      }
     },
   },
   plugins: [],

@@ -1,15 +1,19 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-
+import { FiArrowUpRight } from "react-icons/fi";
 const ButtonBlue = ({ name }) => {
   return (
-    <div className="home-btn group">
+    <div className=" group">
       <Link className="button-blue group">
         <div className="h-6 overflow-hidden">
-          <div className="-mt-6 group-hover:mt-0 ease-linear duration-150">
+          <div className="-mt-6 group-hover:mt-0 ease-linear duration-150 flex items-center justify-center gap-2">
             {name}
+            <FiArrowUpRight className="text-xl"/>
           </div>
-          <div className="">{name}</div>
+          <div className=" flex items-center justify-center gap-2">
+            {name}
+            <FiArrowUpRight className="text-xl"/>
+          </div>
         </div>
       </Link>
     </div>
