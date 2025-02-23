@@ -65,7 +65,7 @@ const HomeComponents = () => {
       );
   }, []);
   return (
-    <div className="container-primary font-ns min-h-screen flex flex-col gap-10 lg:gap-20 justify-center items-center w-full py-16 md:flex-row mt-10 md:mt-0">
+    <div className="container-primary font-ns min-h-screen flex flex-col gap-10 lg:gap-20 justify-center items-center w-full py-16 md:flex-row mt-10">
       <div className="flex flex-col justify-center items-center text-center gap-5 w-full max-w-sm md:max-w-full md:items-start md:text-start">
         <div className="home">
           <p className="button-blue rounded-full text-sm font-semibold">

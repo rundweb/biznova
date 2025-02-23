@@ -175,4 +175,54 @@ const testimonialItem = [
   },
 ];
 
-export { menu, dataHome, whatWeOffer, services, portfolio,testimonialItem };
+
+const pricingPlans = [
+  {
+    name: "Basic Plan",
+    description: "Basic plan for startups and small businesses.",
+    features: [
+      "1 Website",
+      "Free Hosting (1 Year)",
+      "5GB Storage",
+      "1 Professional Email",
+      "Basic SEO Optimization",
+      "Email Support"
+    ],
+    price: "$9.99",
+    buttonText: "Get Started"
+  },
+  {
+    name: "Pro Plan",
+    description: "Advanced features for growing businesses.",
+    features: [
+      "All features from Basic Plan",
+      "5 Websites",
+      "Free Hosting (2 Years)",
+      "50GB Storage",
+      "5 Professional Emails",
+      "Advanced SEO & Analytics",
+      // "Chat Support",
+      // "API Integration"
+    ],
+    price: "$29.99",
+    buttonText: "Get Started"
+  },
+  {
+    name: "Enterprise Plan",
+    description: "Fully customized solutions for large enterprises.",
+    features: [
+      "All features from Pro Plan",
+      "Unlimited Websites",
+      "Dedicated Hosting",
+      "Unlimited Storage",
+      "Unlimited Professional Emails",
+      "Full Customization & Branding",
+      // "Priority 24/7 Support",
+      // "Integration with Internal Systems"
+    ],
+    price: "Custom Pricing",
+    buttonText: "Contact Us"
+  }
+];
+
+export { menu, dataHome, whatWeOffer, services, portfolio,testimonialItem,pricingPlans };
