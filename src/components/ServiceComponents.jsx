@@ -125,9 +125,9 @@ const ServiceComponents = () => {
         {services.map((item, i) => (
           <div key={i} className="service-lis-text">
             <div
-            className="flex flex-col gap-5 p-5 md:p-8 rounded-xl neo w-full sm:max-w-96 cursor-pointer group hover:scale-105 hover:z-20 relative duration-500 ease-in-out service-list-box overflow-hidden"
+            className="flex flex-col gap-5 p-8 rounded-xl neo w-full sm:max-w-96 cursor-pointer group hover:scale-105 hover:z-20 relative duration-500 ease-in-out service-list-box overflow-hidden"
           >
-            <div className="opacity-0 duration-500 ease-in-out group-hover:opacity-100 absolute right-5 top-5 md:right-8 md:top-8 w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full">
+            <div className="opacity-0 duration-500 ease-in-out group-hover:opacity-100 absolute right-5  md:right-8 top-8 w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full">
               <LuArrowUpRight className="text-2xl text-third" />
             </div>
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full service-list">

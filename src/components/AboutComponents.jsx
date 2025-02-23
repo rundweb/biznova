@@ -7,6 +7,7 @@ import { BiCheckDouble } from "react-icons/bi";
 import gsap from "gsap";
 import { useEffect } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 const AboutComponents = () => {
@@ -97,6 +98,8 @@ const AboutComponents = () => {
       }
     );
   }, []);
+
+  const navigate = useNavigate()
   return (
     <section className="about-box container-primary font-ns min-h-screen flex gap-10 lg:gap-28 justify-center items-center w-full py-16 flex-col-reverse md:flex-row ">
       <div className="relative p-5 w-full">
@@ -152,7 +155,7 @@ const AboutComponents = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2 items-center justify-center mt-5 list-about">
+        <div className="flex flex-wrap gap-2 items-center justify-center mt-5 list-about" onClick={()=>navigate("/about")}>
           <ButtonBlue name={"Get Started"} />
         </div>
       </div>
