@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6";
-const NavbarComponents = ({ name, path }) => {
+const NavbarComponents = ({ name, path, id, idOpen }) => {
   return (
     <>
       <Link
         to={path}
-        className="tracking-wide flex items-center justify-between font-primary/90 font-semibold text-lg border-b-[1px] border-neutral-200 py-3 md:hidden"
+        className={`tracking-wide flex items-center justify-between font-primary/90 font-semibold text-lg border-b-[1px] border-neutral-200 py-3 md:hidden ${
+          idOpen === id && "text-secondary"
+        }`}
       >
         {name}
         <FaAngleRight />
@@ -21,7 +23,9 @@ const NavbarComponents = ({ name, path }) => {
           </Link>
           <Link
             to={path}
-            className=" font-primary tracking-wide font-medium "
+            className={`font-primary tracking-wide font-medium ${
+              idOpen === id && "text-secondary"
+            }`}
           >
             {name}
           </Link>

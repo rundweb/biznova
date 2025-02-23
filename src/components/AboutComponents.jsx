@@ -19,11 +19,11 @@ const AboutComponents = () => {
   useEffect(() => {
     gsap.fromTo(
       ".about-title",
-      { y: 100, opacity: 0 },
+      { y: 50, opacity: 0 },
       {
         scrollTrigger: {
-          trigger: ".about-box",
-          start: "top 70%",
+          trigger: ".about-title-box",
+          start: "top bottom",
         },
         y: 0,
         opacity: 1,
@@ -37,14 +37,15 @@ const AboutComponents = () => {
       {
         opacity: 0,
       },
+
       {
         opacity: 1,
         stagger: 0.2,
         duration: 1,
         ease: "power2.in",
         scrollTrigger: {
-          trigger: ".about-box",
-          start: "top 40%",
+          trigger: ".split-h1",
+          start: "top bottom",
         },
       }
     );
@@ -60,15 +61,15 @@ const AboutComponents = () => {
         duration: 1,
         ease: "power2.in",
         scrollTrigger: {
-          trigger: ".about-box",
-          start: "top 20%",
+          trigger: ".split-p",
+          start: "top bottom",
         },
       }
     );
 
     gsap.fromTo(
       ".list-about",
-      { opacity: 0, x: 10 },
+      { opacity: 0, x: 200 },
       {
         opacity: 1,
         x: 0,
@@ -76,8 +77,8 @@ const AboutComponents = () => {
         duration: 1,
         ease: "back.out",
         scrollTrigger: {
-          trigger: ".about-box",
-          start: "top 5%",
+          trigger: ".list-about",
+          start: "top bottom",
         },
       }
     );
@@ -90,8 +91,8 @@ const AboutComponents = () => {
         duration: 2,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".about-box",
-          start: "top 20%",
+          trigger: ".box-img",
+          start: "top bottom",
         },
       }
     );
@@ -110,8 +111,8 @@ const AboutComponents = () => {
       </div>
 
       <div className="flex flex-col gap-5 text-left items-start justify-start w-full ">
-        <div className="about-title">
-          <p className="text-lg font-semibold flex items-center gap-2 text-primary">
+        <div className="about-title-box">
+          <p className="text-lg font-semibold flex items-center gap-2 text-primary about-title">
             <BsStars />
             About Us
           </p>
@@ -120,7 +121,9 @@ const AboutComponents = () => {
           {splitH1.map((item, i) => (
             <h1
               key={i}
-              className={`split-h1 text-font-primary font-extrabold lg:font-black tracking-wide text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight ${i===2&&("text-secondary")} ${i===5&&("text-secondary")}`}
+              className={`split-h1 text-font-primary font-extrabold lg:font-black tracking-wide text-3xl md:text-4xl lg:text-5xl md:leading-tight lg:leading-tight ${
+                i === 2 && "text-secondary"
+              } ${i === 5 && "text-secondary"}`}
             >
               {item}&nbsp;
             </h1>

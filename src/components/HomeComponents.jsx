@@ -29,7 +29,7 @@ const HomeComponents = () => {
         ".text-h1",
         { opacity: 0 },
         { opacity: 1, stagger: 0.1, duration: 1, ease: "power2.in" },
-        "-=0.5"
+        "-=0.8"
       )
       .fromTo(
         ".home-btn",
@@ -50,7 +50,7 @@ const HomeComponents = () => {
           duration: 2,
           ease: "power2.out",
         },
-        "-=0.2"
+        "-=0.8"
       )
       .fromTo(
         ".home-count",
@@ -61,7 +61,7 @@ const HomeComponents = () => {
           duration: 1,
           stagger: 0.2,
         },
-        "-=0.8"
+        "-=0.2"
       );
   }, []);
   return (
@@ -119,7 +119,7 @@ const HomeComponents = () => {
                   }`}
                 >
                   <h1 className="text-primary font-bold text-3xl">
-                    <CountUp end={item.count} duration={5} delay={2} />
+                    <CountUp end={item.count} duration={5} delay={4} />
                     {item.last}
                   </h1>
                   <h2 className="font-medium text-font-primary tracking-wide text-center">

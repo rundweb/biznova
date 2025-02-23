@@ -62,6 +62,12 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleShadow);
   }, []);
+
+  const [openMethods, setOpenMethods] = useState(0);
+
+  const clickOpen = (index) => {
+    setOpenMethods(openMethods === index ? null : index);
+  };
   return (
     <section
       className={`bg-white font-ns fixed w-full z-50 ${
@@ -95,8 +101,8 @@ const Navbar = () => {
           } duration-500 ease-linear md:hidden`}
         >
           {menu.map((item, i) => (
-            <div key={i} className="nav-link item-nav">
-              <NavbarComponents name={item.name} path={item.path} />
+            <div key={i} className="nav-link item-nav" onClick={() => clickOpen(i)}>
+              <NavbarComponents name={item.name} path={item.path} id={i} idOpen={openMethods}/>
             </div>
           ))}
           <Link
@@ -109,8 +115,8 @@ const Navbar = () => {
 
         <div className="hidden md:flex w-full items-center gap-4 justify-center">
           {menu.map((item, i) => (
-            <div key={i} className="logo">
-              <NavbarComponents name={item.name} path={item.path} />
+            <div key={i} className="logo" onClick={() => clickOpen(i)}>
+              <NavbarComponents name={item.name} path={item.path} id={i} idOpen={openMethods}/>
             </div>
           ))}
         </div>

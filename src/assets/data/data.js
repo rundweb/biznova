@@ -63,33 +63,39 @@ const whatWeOffer = [
   },
 ];
 
-import service1 from "../image/website.jpg";
-import service2 from "../image/seo.jpg";
-import service3 from "../image/branding.jpg";
-import service4 from "../image/eccomerce.jpg";
+import { BiCodeAlt, BiSearchAlt, BiPalette, BiCart, BiSupport, BiTrendingUp } from "react-icons/bi";
 
 const services = [
   {
-    title: "Custom Website",
-    description: "Build a powerful, brand-driven website with modern design.",
-    icon: service1,
+    title: "Website Development",
+    description: "Build a fast, modern website that enhances your brand and user experience.",
+    icon: BiCodeAlt 
   },
   {
-    title: "SEO Optimization",
-    description: "Elevate your search rankings with advanced SEO strategies.",
-    icon: service2,
+    title: "SEO Strategy",
+    description: "Boost search rankings with optimized content and technical improvements.",
+    icon: BiSearchAlt 
   },
   {
     title: "Branding & Design",
-    description: "Create a distinctive and impactful brand identity.",
-    icon: service3,
+    description: "Create a unique visual identity with stunning design and strong branding.",
+    icon: BiPalette 
   },
   {
     title: "E-commerce Solutions",
-    description:
-      "Unlock seamless online selling with secure payment integration.",
-    icon: service4,
+    description: "Simplify online selling with secure payments and seamless navigation.",
+    icon: BiCart 
   },
+  {
+    title: "Business Consulting",
+    description: "Get expert insights and strategies to scale your business effectively.",
+    icon: BiTrendingUp 
+  },
+  {
+    title: "24/7 Support",
+    description: "Reliable customer support to keep your business running smoothly.",
+    icon: BiSupport 
+  }
 ];
 
 export { menu, dataHome, whatWeOffer, services };
