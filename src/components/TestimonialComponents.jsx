@@ -47,7 +47,7 @@ const TestimonialComponents = () => {
     );
   }, []);
   return (
-    <section className="p-5 font-ns flex flex-col justify-center items-center gap-10 md:gap-16 py-16">
+    <section className="p-5 font-ns flex flex-col justify-center items-center gap-10 md:gap-16 py-16 min-h-screen">
       <div className="flex items-center flex-col justify-center gap-5">
         <div className="testimonial-p">
           <p className="flex items-center gap-2 button-blue rounded-full font-semibold ">

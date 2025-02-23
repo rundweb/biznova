@@ -124,24 +124,22 @@ const ServiceComponents = () => {
       <div className="service-box flex flex-wrap items-start sm:justify-center gap-5 w-full">
         {services.map((item, i) => (
           <div key={i} className="service-lis-text">
-            <div
-            className="flex flex-col gap-5 p-8 rounded-xl neo w-full sm:max-w-96 cursor-pointer group hover:scale-105 hover:z-20 relative duration-500 ease-in-out service-list-box overflow-hidden"
-          >
-            <div className="opacity-0 duration-500 ease-in-out group-hover:opacity-100 absolute right-5  md:right-8 top-8 w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full">
-              <LuArrowUpRight className="text-2xl text-third" />
+            <div className="flex flex-col gap-5 p-8 rounded-xl neo w-full sm:max-w-96 cursor-pointer group hover:scale-105 hover:z-20 relative duration-500 ease-in-out service-list-box overflow-hidden">
+              <div className="opacity-0 duration-500 ease-in-out group-hover:opacity-100 absolute right-5  md:right-8 top-8 w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full">
+                <LuArrowUpRight className="text-2xl text-third" />
+              </div>
+              <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full service-list">
+                <item.icon className="text-2xl text-third" />
+              </div>
+              <div className="service-list-text">
+                <h1 className="text-xl font-bold text-font-primary tracking-wide  group-hover:bg-gradient-to-r from-primary  to-secondary w-max group-hover:text-transparent group-hover:bg-clip-text duration-500 ease-in-out relative">
+                  {item.title}
+                </h1>
+              </div>
+              <p className="text-font-primary/80 sm:text-base service-list-text">
+                {item.description}
+              </p>
             </div>
-            <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full service-list">
-              <item.icon className="text-2xl text-third" />
-            </div>
-            <div className="service-list-text">
-              <h1 className="text-xl font-bold text-font-primary tracking-wide  group-hover:bg-gradient-to-r from-primary  to-secondary w-max group-hover:text-transparent group-hover:bg-clip-text duration-500 ease-in-out relative">
-                {item.title}
-              </h1>
-            </div>
-            <p className="text-font-primary/80 sm:text-base service-list-text">
-              {item.description}
-            </p>
-          </div>
           </div>
         ))}
       </div>

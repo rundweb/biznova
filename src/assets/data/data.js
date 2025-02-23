@@ -128,7 +128,7 @@ const portfolio = [
     category: ["Template", "SaaS", "Services"],
   },
 ];
-import testimonialImg from "../image/testimonial.png";
+import testimonialImg from "../image/testimonial.jpg";
 
 const testimonialItem = [
   {
