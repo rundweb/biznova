@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import ButtonBlue from "../element/ButtonBlue";
 const BlogsComponents = () => {
   useEffect(() => {
-    [".blog-p", ".blog-h1", ".blog-h2", ".blog-button", ".blog"].forEach(
+    [".blog-p", ".blog-h1", ".blog-h2", ".blog-button", ".blog",".button-all"].forEach(
       (item) => {
         gsap.fromTo(
           item,
@@ -195,7 +195,7 @@ const BlogsComponents = () => {
           ))}
         </div>
       </div>
-      <div className="lg:hidden" onClick={()=>navigate("/blog")}>
+      <div className="lg:hidden button-all" onClick={()=>navigate("/blog")}>
         <ButtonBlue name={"See All Blog"}/>
       </div>
     </section>

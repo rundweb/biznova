@@ -1,5 +1,6 @@
 import AboutComponents from "../components/AboutComponents";
 import BlogsComponents from "../components/BlogsComponents";
+import ContactComponents from "../components/ContactComponents";
 import HomeComponents from "../components/HomeComponents";
 import PortfolioComponents from "../components/PortfolioComponents";
 import PricingComponents from "../components/PricingComponents";
@@ -16,6 +17,7 @@ const Home = () => {
       <TestimonialComponents />
       <PricingComponents />
       <BlogsComponents />
+      <ContactComponents />
     </>
   );
 };
