@@ -175,7 +175,6 @@ const testimonialItem = [
   },
 ];
 
-
 const pricingPlans = [
   {
     name: "Basic Plan",
@@ -186,10 +185,10 @@ const pricingPlans = [
       "5GB Storage",
       "1 Professional Email",
       "Basic SEO Optimization",
-      "Email Support"
+      "Email Support",
     ],
     price: "$9.99",
-    buttonText: "Get Started"
+    buttonText: "Get Started",
   },
   {
     name: "Pro Plan",
@@ -205,7 +204,7 @@ const pricingPlans = [
       // "API Integration"
     ],
     price: "$29.99",
-    buttonText: "Get Started"
+    buttonText: "Get Started",
   },
   {
     name: "Enterprise Plan",
@@ -221,8 +220,77 @@ const pricingPlans = [
       // "Integration with Internal Systems"
     ],
     price: "Custom Pricing",
-    buttonText: "Contact Us"
-  }
+    buttonText: "Contact Us",
+  },
 ];
 
-export { menu, dataHome, whatWeOffer, services, portfolio,testimonialItem,pricingPlans };
+import blog1 from "../image/ai.jpg";
+import blog2 from "../image/bc.jpg";
+import blog3 from "../image/qc.jpg";
+import blog4 from "../image/network.jpg";
+import blog5 from "../image/ar.jpg";
+
+const techBlogs = [
+  {
+    title:
+      "The Future of AI: How Artificial Intelligence is Changing the World",
+    img: testimonialImg,
+    imgTop: blog1,
+    category: "Artificial Intelligence",
+    desc: "AI is evolving and playing a role in various aspects of life, from automation to decision-making. What comes next?",
+    love: 120,
+    comment: 45,
+    date: "2025-02-24",
+  },
+  {
+    title: "Blockchain Technology: More Than Just Crypto",
+    img: testimonialImg,
+    imgTop: blog2,
+    category: "Blockchain",
+    desc: "Blockchain is not just about Bitcoin. This technology has numerous potential applications in industries like healthcare, logistics, and finance.",
+    love: 98,
+    comment: 30,
+    date: "2025-02-23",
+  },
+  {
+    title: "Quantum Computing: A New Era of Superfast Computation",
+    img: testimonialImg,
+    imgTop: blog3,
+    category: "Quantum Computing",
+    desc: "Quantum computing promises extraordinary speed in data processing and solving complex problems in seconds.",
+    love: 150,
+    comment: 60,
+    date: "2025-02-22",
+  },
+  {
+    title: "5G and the Future of Ultra-Fast Internet",
+    img: testimonialImg,
+    imgTop: blog4,
+    category: "Networking",
+    desc: "5G networks bring a revolution in internet speed and connectivity, opening new opportunities for IoT and smart cities.",
+    love: 85,
+    comment: 25,
+    date: "2025-02-21",
+  },
+  {
+    title: "Augmented Reality: Transforming How We Interact with the World",
+    img: testimonialImg,
+    imgTop: blog5,
+    category: "Augmented Reality",
+    desc: "AR is increasingly used in gaming, education, and business. How will this technology evolve in the future?",
+    love: 110,
+    comment: 40,
+    date: "2025-02-20",
+  },
+];
+
+export {
+  menu,
+  dataHome,
+  whatWeOffer,
+  services,
+  portfolio,
+  testimonialItem,
+  pricingPlans,
+  techBlogs,
+};

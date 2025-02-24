@@ -85,9 +85,9 @@ const PricingComponents = () => {
                   /month
                 </span>
               </h3>
-              <button className="button-blue font-semibold flex flex-col group">
-                <div className="overflow-hidden h-6">
-                  <div className="-mt-6 group-hover:mt-0 duration-200 ease-linear">
+              <button className="button-blue font-semibold flex flex-col group h-12 text-lg">
+                <div className="overflow-hidden h-7">
+                  <div className="-mt-7 group-hover:mt-0 duration-200 ease-linear">
                     {item.buttonText}
                   </div>
                   <div className="">{item.buttonText}</div>
@@ -103,7 +103,7 @@ const PricingComponents = () => {
                   <div>
                     <BsCheckAll className="text-primary text-2xl" />
                   </div>
-                  <h1 className="text-font-primary  ">{feature}</h1>
+                  <h1 className="text-font-primary  font-semibold">{feature}</h1>
                 </div>
               ))}
             </div>

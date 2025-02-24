@@ -1,9 +1,13 @@
-import { BsStars } from "react-icons/bs";
 import gsap from "gsap";
 import { useEffect } from "react";
+// icon
+import { BsStars } from "react-icons/bs";
 import { BiSolidQuoteRight } from "react-icons/bi";
+// swiper css
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+// data
 import { testimonialItem } from "../assets/data/data";
 const TestimonialComponents = () => {
   useEffect(() => {
@@ -67,6 +71,12 @@ const TestimonialComponents = () => {
           centeredSlides={true}
           loop={true}
           grabCursor={true}
+          speed={8000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
           breakpoints={{
             768: {
               slidesPerView: 2,

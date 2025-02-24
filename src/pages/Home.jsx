@@ -1,4 +1,5 @@
 import AboutComponents from "../components/AboutComponents";
+import BlogsComponents from "../components/BlogsComponents";
 import HomeComponents from "../components/HomeComponents";
 import PortfolioComponents from "../components/PortfolioComponents";
 import PricingComponents from "../components/PricingComponents";
@@ -7,14 +8,15 @@ import TestimonialComponents from "../components/TestimonialComponents";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HomeComponents />
-      <AboutComponents/>
-      <ServiceComponents/>
-      <PortfolioComponents/>
-      <TestimonialComponents/>
-      <PricingComponents/>
-    </div>
+      <AboutComponents />
+      <ServiceComponents />
+      <PortfolioComponents />
+      <TestimonialComponents />
+      <PricingComponents />
+      <BlogsComponents />
+    </>
   );
 };
 
