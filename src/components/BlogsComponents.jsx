@@ -9,27 +9,32 @@ import { techBlogs } from "../assets/data/data";
 
 // icon
 import { BsCalendar2Date } from "react-icons/bs";
-import { FiArrowDownRight } from "react-icons/fi";
+import { FiArrowDownRight, FiArrowUpRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import ButtonBlue from "../element/ButtonBlue";
 const BlogsComponents = () => {
   useEffect(() => {
-    [".blog-p", ".blog-h1", ".blog-h2", ".blog-button",".blog"].forEach((item) => {
-      gsap.fromTo(
-        item,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          stagger:0.2,
-          ease: "power2.out",
-          scrollTrigger: { trigger: item, start: "top bottom" },
-        }
-      );
-    });
+    [".blog-p", ".blog-h1", ".blog-h2", ".blog-button", ".blog"].forEach(
+      (item) => {
+        gsap.fromTo(
+          item,
+          { y: 100, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: { trigger: item, start: "top bottom" },
+          }
+        );
+      }
+    );
   }, []);
 
   const blogPrimary = techBlogs[0];
   const selectedBlogs = techBlogs.slice(1, 3);
+  const navigate = useNavigate()
   return (
     <section className="container-primary min-h-screen py-16 flex flex-col gap-10 items-center justify-center font-ns">
       <div className="flex flex-col gap-5 items-start justify-start w-full md:flex-row md:items-center md:justify-between">
@@ -52,7 +57,7 @@ const BlogsComponents = () => {
         </div>
         <div className="hidden h-28 w-28  md:flex items-center justify-center blog-button">
           <div className="p-5 border-primary md:p-0 border-2 md:border-primary/0 rounded-full hover:p-5 hover:border-primary duration-500 ease-in-out ">
-            <div className="w-20 h-20 group hover:scale-110 duration-300 ease-in-out cursor-pointer bg-gradient-to-t from-secondary to-primary flex items-center justify-center rounded-full">
+            <div onClick={()=>navigate("/blog")} className="w-20 h-20 group duration-300 ease-in-out cursor-pointer bg-gradient-to-t from-secondary to-primary flex items-center justify-center rounded-full">
               <div className="h-9 overflow-hidden">
                 <div className="-mt-9 group-hover:mt-0 duration-200 ease-linear">
                   <TbArrowUpRight className="text-white text-4xl" />
@@ -68,12 +73,12 @@ const BlogsComponents = () => {
       <div className="flex flex-col gap-10 items-center md:items-start justify-center w-full lg:flex-row">
         {/* right */}
         <div className="w-full blog">
-          <div className="flex flex-col gap-5">
-            <div>
+          <div className="flex flex-col gap-5 group">
+            <div className="overflow-hidden">
               <img
                 src={blogPrimary.imgTop}
                 alt="img-blog"
-                className="h-40 md:h-72 w-full object-cover rounded-t-lg"
+                className="h-40 md:h-72 w-full object-cover rounded-t-lg group-hover:scale-110 ease-in-out duration-300"
               />
             </div>
             <div className="flex items-center justify-start gap-4">
@@ -88,7 +93,7 @@ const BlogsComponents = () => {
                 James Rodriguez
               </p>
             </div>
-            <h1 className="font-extrabold text-font-primary text-2xl">
+            <h1 className="font-extrabold text-font-primary text-2xl group-hover:bg-gradient-to-r from-secondary to-primary inline-block group-hover:text-transparent bg-clip-text duration-300 ease-in-out">
               {blogPrimary.title}
             </h1>
             <div className="flex items-center gap-2">
@@ -112,8 +117,15 @@ const BlogsComponents = () => {
                 </p>
               </div>
               <div>
-                <div className="bg-gradient-to-t from-secondary to-primary h-12 w-12 flex items-center justify-center rounded-md text-white">
-                  <FiArrowDownRight className="text-3xl" />
+                <div className="group cursor-pointer bg-gradient-to-t from-secondary to-primary h-12 w-12 flex items-center justify-center rounded-md text-white">
+                  <div className="overflow-hidden h-7">
+                    <div className="-mt-8 group-hover:mt-0 duration-200 ease-linear">
+                      <FiArrowUpRight className="text-3xl" />
+                    </div>
+                    <div>
+                      <FiArrowDownRight className="text-3xl" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,12 +134,12 @@ const BlogsComponents = () => {
         {/* left */}
         <div className="w-full flex flex-col gap-10 blog">
           {selectedBlogs.map((blog, index) => (
-            <div className="flex flex-col gap-5 lg:flex-row" key={index}>
-              <div className="w-full">
+            <div className="flex flex-col gap-5 lg:flex-row group" key={index}>
+              <div className="w-full overflow-hidden rounded-lg">
                 <img
                   src={blog.imgTop}
                   alt="img-blog"
-                  className="h-full w-full object-cover rounded-t-lg  lg:rounded-lg"
+                  className="h-full w-full object-cover rounded-t-lg  lg:rounded-lg group-hover:scale-110 ease-in-out duration-300"
                 />
               </div>
               <div className="flex flex-col gap-5 w-full lg:gap-4">
@@ -143,7 +155,7 @@ const BlogsComponents = () => {
                     James Rodriguez
                   </p>
                 </div>
-                <h1 className="font-extrabold text-font-primary text-2xl lg:text-lg">
+                <h1 className="font-extrabold text-font-primary text-2xl lg:text-lg group-hover:bg-gradient-to-r from-secondary to-primary inline-block group-hover:text-transparent bg-clip-text duration-300 ease-in-out">
                   {blog.title}
                 </h1>
                 <div className="flex items-center gap-2">
@@ -166,8 +178,15 @@ const BlogsComponents = () => {
                     </p>
                   </div>
                   <div>
-                    <div className="bg-gradient-to-t from-secondary to-primary h-12 w-12 lg:h-10 lg:w-10 flex items-center justify-center rounded-md text-white">
-                      <FiArrowDownRight className="text-3xl" />
+                    <div className=" cursor-pointer bg-gradient-to-t from-secondary to-primary h-10 w-10 flex items-center justify-center rounded-md text-white">
+                      <div className="overflow-hidden h-7">
+                        <div className="-mt-8 group-hover:mt-0 duration-200 ease-linear">
+                          <FiArrowUpRight className="text-3xl" />
+                        </div>
+                        <div>
+                          <FiArrowDownRight className="text-3xl" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -175,6 +194,9 @@ const BlogsComponents = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="lg:hidden" onClick={()=>navigate("/blog")}>
+        <ButtonBlue name={"See All Blog"}/>
       </div>
     </section>
   );
