@@ -48,11 +48,11 @@ const PricingComponents = () => {
           </h2>
         </div>
       </div>
-      <div className="flex flex-wrap w-full gap-10 items-start justify-center">
+      <div className="flex flex-wrap w-full gap-5 md:gap-10 items-start justify-center">
         {pricingPlans.map((item, i) => (
           <div
             key={i}
-            className={`pricing relative overflow-hidden flex flex-col gap-5 px-5 py-8 neo-secondary rounded-lg w-full max-w-sm ${
+            className={`pricing relative overflow-hidden flex flex-col gap-5 px-5 py-8 neo-secondary rounded-lg w-full max-w-sm md:${
               i === 1 ? "scale-110" : "scale-100"
             }`}
           >

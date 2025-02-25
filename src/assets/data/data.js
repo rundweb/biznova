@@ -25,6 +25,25 @@ const menu = [
   },
 ];
 
+const menuDetails = [
+  {
+    name: "Service Detail",
+    path: "/serviceDetail",
+  },
+  {
+    name: "Blog Detail",
+    path: "/blogDetail",
+  },
+  {
+    name: "Pricing Detail",
+    path: "/pricingDetail",
+  },
+  {
+    name: "Portfolio Detail",
+    path: "/portfolioDetail",
+  },
+];
+
 const dataHome = [
   {
     name: "Courses",
@@ -286,6 +305,7 @@ const techBlogs = [
 
 export {
   menu,
+  menuDetails,
   dataHome,
   whatWeOffer,
   services,

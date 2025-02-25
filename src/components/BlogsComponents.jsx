@@ -139,7 +139,7 @@ const BlogsComponents = () => {
                 <img
                   src={blog.imgTop}
                   alt="img-blog"
-                  className="h-full w-full object-cover rounded-t-lg  lg:rounded-lg group-hover:scale-110 ease-in-out duration-300"
+                  className="h-40 md:h-72 lg:h-full w-full object-cover rounded-t-lg  lg:rounded-lg group-hover:scale-110 ease-in-out duration-300"
                 />
               </div>
               <div className="flex flex-col gap-5 w-full lg:gap-4">
