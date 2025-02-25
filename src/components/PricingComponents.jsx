@@ -52,8 +52,8 @@ const PricingComponents = () => {
         {pricingPlans.map((item, i) => (
           <div
             key={i}
-            className={`pricing relative overflow-hidden flex flex-col gap-5 px-5 py-8 neo-secondary rounded-lg w-full max-w-sm md:${
-              i === 1 ? "scale-110" : "scale-100"
+            className={`pricing relative overflow-hidden flex flex-col gap-5 px-5 py-8 neo-secondary rounded-lg w-full max-w-sm ${
+              i === 1 ? "md:scale-110" : "scale-100"
             }`}
           >
             <div

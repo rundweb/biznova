@@ -303,6 +303,40 @@ const techBlogs = [
   },
 ];
 
+const blogDetails = [
+  {
+    title:
+      "The Future of AI: How Artificial Intelligence is Changing the World",
+    img: blog1,
+    category: "Artificial Intelligence",
+    desc: [
+      {
+        icon: "🚀",
+        bold: "The Rise of AI in Everyday Life",
+        text: " AI is already embedded in many aspects of modern life. In healthcare, AI-powered diagnostic systems can detect diseases like cancer with greater accuracy and speed than human doctors. AI-driven robots assist in surgeries, reducing errors and improving patient outcomes. In the business world, AI optimizes logistics, streamlines customer service, and enhances cybersecurity by identifying threats before they cause damage.",
+      },
+      {
+        icon: "🌍",
+        bold: "AI's Role in Industry and Automation",
+        text: " The impact of AI on industries is profound. Factories are adopting AI-powered automation, leading to increased production efficiency and cost reduction. Smart cities utilize AI to optimize traffic flow, reduce energy consumption, and enhance public safety. The financial sector relies on AI for fraud detection, risk assessment, and algorithmic trading that operates at speeds beyond human capability.",
+      },
+      {
+        icon: "🧠",
+        bold: "The Ethical Dilemmas of AI",
+        text: " With AI's rapid development, ethical concerns have become a major topic of discussion. AI algorithms can inherit biases from the data they are trained on, leading to unfair treatment in hiring processes, law enforcement, and even medical diagnoses. The infamous problem—where AI makes decisions without clear explanations—raises questions about transparency and accountability.",
+      },
+      {
+        icon: "🔮",
+        bold: "What’s Next for AI?",
+        text: " As AI technology advances, its potential seems limitless. Researchers are working on Artificial General Intelligence (AGI), a form of AI that can perform any intellectual task that a human can do. If AGI becomes a reality, it could revolutionize science, medicine, and even space exploration.",
+      },
+    ],
+    love: 120,
+    comment: 45,
+    date: "2025-02-24",
+  },
+];
+
 export {
   menu,
   menuDetails,
@@ -313,4 +347,5 @@ export {
   testimonialItem,
   pricingPlans,
   techBlogs,
+  blogDetails,
 };

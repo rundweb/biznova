@@ -192,7 +192,9 @@ const ContactComponents = () => {
             <div className="contact-form">
               <button className="group w-full bg-gradient-to-t from-secondary to-primary h-12 rounded-lg text-third font-semibold text-lg">
                 <div className="h-7 overflow-hidden">
-                  <div className="-mt-7 group-hover:mt-0 duration-200 ease-linear">Send Massage</div>
+                  <div className="-mt-7 group-hover:mt-0 duration-200 ease-linear">
+                    Send Massage
+                  </div>
                   <div>Send Massage</div>
                 </div>
               </button>

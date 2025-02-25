@@ -4,7 +4,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { FiArrowUpRight } from "react-icons/fi";
 import NavbarComponents from "../components/NavbarComponents";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import gsap from "gsap";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(true);
@@ -68,6 +68,8 @@ const Navbar = () => {
   const clickOpen = (index) => {
     setOpenMethods(openMethods === index ? null : index);
   };
+
+  const navigate = useNavigate();
   return (
     <section
       className={`bg-white font-ns fixed w-full z-50 ${
@@ -76,7 +78,10 @@ const Navbar = () => {
     >
       <div className="container-primary flex items-center justify-between">
         <div className="w-full relative z-50 nav-link logo">
-          <h1 className="text-3xl font-extrabold tracking-wide font-primary">
+          <h1
+            className="text-3xl font-extrabold tracking-wide font-primary cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             BIZ<span>NOVA</span>
           </h1>
         </div>
@@ -101,8 +106,17 @@ const Navbar = () => {
           } duration-500 ease-linear md:hidden`}
         >
           {menu.map((item, i) => (
-            <div key={i} className="nav-link item-nav" onClick={() => clickOpen(i)}>
-              <NavbarComponents name={item.name} path={item.path} id={i} idOpen={openMethods}/>
+            <div
+              key={i}
+              className="nav-link item-nav"
+              onClick={() => clickOpen(i)}
+            >
+              <NavbarComponents
+                name={item.name}
+                path={item.path}
+                id={i}
+                idOpen={openMethods}
+              />
             </div>
           ))}
           <Link
@@ -116,7 +130,12 @@ const Navbar = () => {
         <div className="hidden md:flex w-full items-center gap-4 justify-center">
           {menu.map((item, i) => (
             <div key={i} className="logo" onClick={() => clickOpen(i)}>
-              <NavbarComponents name={item.name} path={item.path} id={i} idOpen={openMethods}/>
+              <NavbarComponents
+                name={item.name}
+                path={item.path}
+                id={i}
+                idOpen={openMethods}
+              />
             </div>
           ))}
         </div>

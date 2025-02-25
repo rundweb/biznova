@@ -73,7 +73,7 @@ const BlogsComponents = () => {
       <div className="flex flex-col gap-10 items-center md:items-start justify-center w-full lg:flex-row">
         {/* right */}
         <div className="w-full blog">
-          <div className="flex flex-col gap-5 group">
+          <div className="flex flex-col gap-5 group cursor-pointer" onClick={()=>navigate("/blogDetail")}>
             <div className="overflow-hidden">
               <img
                 src={blogPrimary.imgTop}
@@ -134,7 +134,7 @@ const BlogsComponents = () => {
         {/* left */}
         <div className="w-full flex flex-col gap-10 blog">
           {selectedBlogs.map((blog, index) => (
-            <div className="flex flex-col gap-5 lg:flex-row group" key={index}>
+            <div className="flex flex-col gap-5 lg:flex-row group cursor-pointer" key={index} onClick={()=>navigate("/blogDetail")}>
               <div className="w-full overflow-hidden rounded-lg">
                 <img
                   src={blog.imgTop}

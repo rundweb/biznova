@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Portfolio from "./pages/Portfolio";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blogDetail" element={<BlogDetails />} />
       </Routes>
     </div>
   );

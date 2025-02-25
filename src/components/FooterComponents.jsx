@@ -31,6 +31,7 @@ const FooterComponents = () => {
       );
     });
   }, []);
+
   return (
     <div className="container-primary flex flex-col gap-10 pt-16 font-ns">
       <div className="flex items-center justify-center text-center flex-wrap gap-10 md:items-start md:justify-between md:text-start">
@@ -39,7 +40,8 @@ const FooterComponents = () => {
             From Our Blog
           </h1>
           {dataBlog.map((item, i) => (
-            <div
+            <Link
+              to={"/blogDetail"}
               key={i}
               className="flex flex-col gap-2 cursor-pointer group footer-blog"
             >
@@ -55,7 +57,7 @@ const FooterComponents = () => {
                   {item.category}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex flex-col gap-2 w-full md:max-w-[130px] items-center footer-links">
