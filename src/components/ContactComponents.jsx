@@ -6,6 +6,7 @@ import { HiArrowRight } from "react-icons/hi";
 // gsap
 import gsap from "gsap";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 const ContactComponents = () => {
   useEffect(() => {
     [".contact-p", ".contact-h1", ".contact-h2", ".contact-service"].forEach(
@@ -86,7 +87,7 @@ const ContactComponents = () => {
                   Example@gmail.com
                 </h1>
               </div>
-              <div>
+              <Link to={"https://mail.google.com/"}>
                 <div className="button-blue text-lg p-0 w-10 h-10 cursor-pointer group">
                   <div className="flex items-center w-5 overflow-hidden gap-2">
                     <div className="-ml-6 group-hover:ml-[2px] duration-200 ease-linear">
@@ -97,7 +98,7 @@ const ContactComponents = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="w-full p-5 bg-white flex flex-wrap items-center justify-between gap-4 contact-box">
               <div>
@@ -108,7 +109,7 @@ const ContactComponents = () => {
                   +61 8123 4567 892
                 </h1>
               </div>
-              <div>
+              <Link to={"https://web.whatsapp.com/"}>
                 <div className="button-blue text-lg p-0 w-10 h-10 cursor-pointer group">
                   <div className="flex items-center w-5 overflow-hidden gap-2">
                     <div className="-ml-6 group-hover:ml-[2px] duration-200 ease-linear">
@@ -119,7 +120,7 @@ const ContactComponents = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="w-full p-5 bg-white flex flex-wrap items-center justify-between gap-4 contact-box">
               <div>
@@ -130,7 +131,7 @@ const ContactComponents = () => {
                   Indonesia West Java
                 </h1>
               </div>
-              <div>
+              <Link to={"https://www.google.com/maps"}>
                 <div className="button-blue text-lg p-0 w-10 h-10 cursor-pointer group">
                   <div className="flex items-center w-5 overflow-hidden gap-2">
                     <div className="-ml-6 group-hover:ml-[2px] duration-200 ease-linear">
@@ -141,7 +142,7 @@ const ContactComponents = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -189,7 +190,7 @@ const ContactComponents = () => {
                 className="w-full rounded-lg p-5 outline-primary text-font-primary"
               ></textarea>
             </div>
-            <div className="contact-form">
+            <Link to={"/"} className="contact-form">
               <button className="group w-full bg-gradient-to-t from-secondary to-primary h-12 rounded-lg text-third font-semibold text-lg">
                 <div className="h-7 overflow-hidden">
                   <div className="-mt-7 group-hover:mt-0 duration-200 ease-linear">
@@ -198,7 +199,7 @@ const ContactComponents = () => {
                   <div>Send Massage</div>
                 </div>
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

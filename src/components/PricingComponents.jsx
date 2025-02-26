@@ -11,12 +11,12 @@ const PricingComponents = () => {
       (selector) => {
         gsap.fromTo(
           selector,
-          { y: 50, opacity: 0 },
+          { y: 100, opacity: 0 },
           {
             y: 0,
             opacity: 1,
             duration: 1,
-            stagger: 0.2,
+            stagger: 0.1,
             ease: "power2.out",
             scrollTrigger: { trigger: selector, start: "top bottom" },
           }

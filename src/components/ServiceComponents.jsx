@@ -3,6 +3,7 @@ import { services } from "../assets/data/data";
 import gsap from "gsap";
 import { useEffect } from "react";
 import { LuArrowUpRight } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const ServiceComponents = () => {
   const serviceH1 = "Empowering Your Business With Smart Solutions";
   const splitService = serviceH1.split(" ");
@@ -10,7 +11,7 @@ const ServiceComponents = () => {
   useEffect(() => {
     gsap.fromTo(
       ".service-title",
-      { y: 50, opacity: 0 },
+      { y: 100, opacity: 0 },
       {
         scrollTrigger: {
           trigger: ".service-title-box",
@@ -30,7 +31,7 @@ const ServiceComponents = () => {
       },
       {
         opacity: 1,
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 1,
         ease: "power2.in",
         scrollTrigger: {
@@ -123,7 +124,7 @@ const ServiceComponents = () => {
       </div>
       <div className="service-box flex flex-wrap items-start sm:justify-center gap-5 w-full">
         {services.map((item, i) => (
-          <div key={i} className="service-lis-text">
+          <Link to={"/serviceDetail"} key={i} className="service-lis-text">
             <div className="flex flex-col gap-5 p-8 rounded-xl neo w-full sm:max-w-96 cursor-pointer group hover:scale-105 hover:z-20 relative duration-500 ease-in-out service-list-box overflow-hidden">
               <div className="opacity-0 duration-500 ease-in-out group-hover:opacity-100 absolute right-5  md:right-8 top-8 w-12 h-12 flex items-center justify-center bg-gradient-to-t from-secondary to-primary rounded-full">
                 <LuArrowUpRight className="text-2xl text-third" />
@@ -140,7 +141,7 @@ const ServiceComponents = () => {
                 {item.description}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

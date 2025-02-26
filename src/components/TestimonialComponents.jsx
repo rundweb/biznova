@@ -13,7 +13,7 @@ const TestimonialComponents = () => {
   useEffect(() => {
     gsap.fromTo(
       ".testimonial-p",
-      { y: 50, opacity: 0 },
+      { y: 100, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -28,7 +28,7 @@ const TestimonialComponents = () => {
 
     gsap.fromTo(
       ".testimonial-h1",
-      { y: 50, opacity: 0 },
+      { y: 100, opacity: 0 },
       {
         y: 0,
         opacity: 1,

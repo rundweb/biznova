@@ -6,12 +6,12 @@ const PortfolioAll = () => {
   useEffect(() => {
     gsap.fromTo(
       ".porto",
-      { y: 100, opacity: 0 },
+      { y: 200, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         duration: 1,
-        stagger:0.2,
+        stagger:0.1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".porto-box",

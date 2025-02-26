@@ -33,15 +33,7 @@ const menuDetails = [
   {
     name: "Blog Detail",
     path: "/blogDetail",
-  },
-  {
-    name: "Pricing Detail",
-    path: "/pricingDetail",
-  },
-  {
-    name: "Portfolio Detail",
-    path: "/portfolioDetail",
-  },
+  }
 ];
 
 const dataHome = [
@@ -337,6 +329,23 @@ const blogDetails = [
   },
 ];
 
+import { FaReact, FaNodeJs, FaLaravel } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiMysql, SiFirebase, SiVercel, SiNetlify, SiDigitalocean } from "react-icons/si";
+
+const technologies = [
+  { icon: FaReact, name: "React" },
+  { icon: SiNextdotjs, name: "Next.js" },
+  { icon: SiTailwindcss, name: "Tailwind CSS" },
+  { icon: FaNodeJs, name: "Node.js" },
+  { icon: FaLaravel, name: "Laravel" },
+  { icon: SiMysql, name: "MySQL" },
+  { icon: SiMongodb, name: "MongoDB" },
+  { icon: SiFirebase, name: "Firebase" },
+  { icon: SiVercel, name: "Vercel" },
+  { icon: SiNetlify, name: "Netlify" },
+  { icon: SiDigitalocean, name: "DigitalOcean" }
+];
+
 export {
   menu,
   menuDetails,
@@ -348,4 +357,5 @@ export {
   pricingPlans,
   techBlogs,
   blogDetails,
+  technologies
 };

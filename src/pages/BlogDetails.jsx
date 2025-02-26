@@ -8,9 +8,10 @@ import FooterComponents from "../components/FooterComponents";
 // gsap
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
+import TitleDetails from "../element/TitleDetails";
 const BlogDetails = () => {
   useEffect(() => {
-    [".detail-blog", ".detail-popular", ".detail-writer"].forEach((item) => {
+    [".blog-title",".detail-blog", ".detail-popular", ".detail-writer"].forEach((item) => {
       gsap.fromTo(
         item,
         { y: 100, opacity: 0 },
@@ -22,9 +23,10 @@ const BlogDetails = () => {
   const navigate = useNavigate()
   return (
     <div>
-      <section className="container-primary min-h-screen font-ns mt-20 flex flex-col">
+      <section className="container-primary min-h-screen font-ns mt-20 flex flex-col items-center justify-center">
+        <TitleDetails texth1={"Blog Details"} texth2={"Home / Blog Details"}/>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10">
-          <div className="w-full mx-auto p-6 h-max bg-third shadow-lg rounded-lg col-span-2 detail-blog">
+          <div className="w-full mx-auto p-6 h-max bg-third shadow-lg rounded-lg md:col-span-2 detail-blog">
             <img
               src={blogItem.img}
               alt={blogItem.title}
@@ -49,7 +51,7 @@ const BlogDetails = () => {
             </div>
           </div>
 
-          <div className="w-full col-span-2 md:col-span-1 gap-5 md:gap-10 flex flex-col">
+          <div className="w-full  gap-5 md:gap-10 flex flex-col">
             <div className="w-full h-max mx-auto p-5 bg-third shadow-lg rounded-lg flex items-start justify-start flex-col gap-5 detail-popular">
               <h1 className="text-font-primary font-bold text-xl detail-popular">
                 Popular Blog

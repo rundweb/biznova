@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
   .container-primary {
     @apply max-w-7xl m-auto p-5;
@@ -37,4 +38,8 @@
 }
 .swiper-wrapper {
   transition-timing-function: linear !important ;
+}
+
+li{
+  list-style: none;
 }

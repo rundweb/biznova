@@ -102,14 +102,14 @@ const HomeComponents = () => {
         </div>
       </div>
       <div className="w-full overflow-hidden">
-        <div className="relative">
+        <div className="relative p-5 w-full">
           <img
             src={home}
             alt="home-image primary"
             className="h-80 sm:h-[450px] w-full object-cover rounded-xl"
           />
           <div className="absolute z-30 h-full w-full bg-white bottom-0 right-0 home-img"></div>
-          <div className="home-count absolute w-[95%] bg-third/50 filter backdrop-blur-sm left-2/4 -translate-x-2/4 bottom-2 rounded-2xl items-center justify-center p-5 border-2 border-third hidden md:flex">
+          <div className="home-count absolute w-[85%] bg-third/50 filter backdrop-blur-sm left-2/4 -translate-x-2/4 bottom-9 rounded-2xl items-center justify-center p-5 border-2 border-third hidden md:flex">
             <div className="flex items-center justify-around gap-5 w-full">
               {dataHome.map((item, i) => (
                 <div

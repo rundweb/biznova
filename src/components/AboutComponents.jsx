@@ -20,7 +20,7 @@ const AboutComponents = () => {
   useEffect(() => {
     gsap.fromTo(
       ".about-title",
-      { y: 50, opacity: 0 },
+      { y: 100, opacity: 0 },
       {
         scrollTrigger: {
           trigger: ".about-title-box",
@@ -74,7 +74,7 @@ const AboutComponents = () => {
       {
         opacity: 1,
         x: 0,
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 1,
         ease: "back.out",
         scrollTrigger: {

@@ -113,19 +113,19 @@ const FooterComponents = () => {
             </p>
             <div className="flex flex-row gap-2 mt-2 footer-about">
               <a
-                href="#"
+                href="https://x.com/home?lang=id" target="_blank"
                 className="w-10 h-10 border-2 border-font-primary/10 rounded-full flex items-center justify-center group hover:scale-110 duration-300 ease-in-out"
               >
                 <FaTwitter className="text-base text-font-primary group-hover:text-secondary duration-300 ease-in-out" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/?locale=id_ID" target="_blank"
                 className="w-10 h-10 border-2 border-font-primary/10 rounded-full flex items-center justify-center group hover:scale-110 duration-300 ease-in-out"
               >
                 <FaFacebookF className="text-base text-font-primary group-hover:text-secondary duration-300 ease-in-out" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/" target="_blank"
                 className="w-10 h-10 border-2 border-font-primary/10 rounded-full flex items-center justify-center group hover:scale-110 duration-300 ease-in-out"
               >
                 <FaYoutube className="text-base text-font-primary group-hover:text-secondary duration-300 ease-in-out" />

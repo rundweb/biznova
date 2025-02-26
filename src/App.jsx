@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
+import ServiceDetails from "./pages/ServiceDetails";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blogDetail" element={<BlogDetails />} />
+        <Route path="/serviceDetail" element={<ServiceDetails />} />
       </Routes>
     </div>
   );

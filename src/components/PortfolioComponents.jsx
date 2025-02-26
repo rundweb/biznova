@@ -29,9 +29,10 @@ const PortfolioComponents = () => {
       { opacity: 0 },
       {
         opacity: 1,
-        stagger: 0.2,
-        ease: "power2.in",
-        scrollTrigger: { trigger: ".port-h1-box", start: "top bottom" },
+        duration:1,
+        stagger: 0.1,
+        ease: "power2.out",
+        scrollTrigger: { trigger: ".port-h1", start: "top bottom" },
       }
     );
 
@@ -40,9 +41,10 @@ const PortfolioComponents = () => {
       { opacity: 0 },
       {
         opacity: 1,
-        stagger: 0.2,
-        ease: "power2.in",
-        scrollTrigger: { trigger: ".port-h2-box", start: "top bottom" },
+        duration:1,
+        stagger: 0.05,
+        ease: "power2.out",
+        scrollTrigger: { trigger: ".port-h2", start: "top bottom" },
       }
     );
 
