@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import TitleDetails from "../element/TitleDetails";
 const BlogDetails = () => {
   useEffect(() => {
-    [".blog-title",".detail-blog", ".detail-popular", ".detail-writer"].forEach((item) => {
+    [".detail-blog", ".detail-popular", ".detail-writer"].forEach((item) => {
       gsap.fromTo(
         item,
         { y: 100, opacity: 0 },

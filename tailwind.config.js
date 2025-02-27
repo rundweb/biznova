@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        "ns":["Nunito Sans", "serif"],
-        "pd":["Playfair Display", "serif"],
+        "ns":["Nunito Sans", "serif"]
       },
       colors:{
         // blue-500
